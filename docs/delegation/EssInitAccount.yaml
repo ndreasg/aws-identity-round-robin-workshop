@@ -210,7 +210,7 @@ Resources:
 
 # LoggingTrail - Create the CloudTrail
 #
-# NOTE: The DependsOn clause is needed because the bucket pokicy must be in
+# NOTE: The DependsOn clause is needed because the bucket policy must be in
 # place before the trail can be created.
 
   LoggingTrail:
@@ -247,7 +247,7 @@ Resources:
 
 # SecOperatorMaciePolicy - Managed Policy for Amazon Macie Security Operator role
 #
-# NOTE: This policy *initially* is identitcal to SecAdministratorMaciePolicy.
+# NOTE: This policy *initially* is identical to SecAdministratorMaciePolicy.
 # You will update this policy in the console as part of the lab exercise.
 
   SecOperatorMaciePolicy:
@@ -302,7 +302,7 @@ Resources:
 # NOTE: Amazon SNS is included because it provides for a cleaner console
 # experience for Amazon Inspector.
 #
-# NOTE: This role *initially* is almost identitcal to SecAdministratorMacieRole.
+# NOTE: This role *initially* is almost identical to SecAdministratorMacieRole.
 # You will update the definition in the console as part of the lab exercise.
 
   SecOperatorRole:

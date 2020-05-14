@@ -8,7 +8,7 @@ It's now time **VERIFY** the setup from the **Build** phase. You will be acting 
 
 !!! Pre-Verification
     <p style="font-size:14px;">
-      In order validate your setup ***before*** swapping credentials with another team, enter the ***account Id for your team*** instead of the other team in the `~/.aws/config` file referenced above for the *role_arn* and procede with the steps below. The VERIFY phase assumes you are checking another team's setup but for your own testing this will be just done in your own account. You'll need to keep that in mind because some of the VERIFY phase instructions assume you are doing this cross account so you'll need to adjust some of the commands. Once you have confirmed the delegated access is functioning within your team account, update `~/.aws/config` and test against the other team's account.
+      In order validate your setup ***before*** swapping credentials with another team, enter the ***account Id for your team*** instead of the other team in the `~/.aws/config` file referenced above for the *role_arn* and proceed with the steps below. The VERIFY phase assumes you are checking another team's setup but for your own testing this will be just done in your own account. You'll need to keep that in mind because some of the VERIFY phase instructions assume you are doing this cross account so you'll need to adjust some of the commands. Once you have confirmed the delegated access is functioning within your team account, update `~/.aws/config` and test against the other team's account.
     </p>
 
 1\. Verify in **your** team's account:
