@@ -165,16 +165,12 @@ You can also select a color that will be used to display the role you assume in 
 
 4. Now go to the Amazon Inspector Console.  To verify that you have administrative capabilities for Inspector, you are going to clone an existing template.  Click **Assessment Templates** and check the box to the left of the template name that begins with *LampInspectorAssessmentTemplate* and click **Clone**.  A section of the form will appear.  Scroll down towards the bottom and click the **Create** button.   Refresh the screen.  You should now see two templates that begin with *LampInspectorAssessment*.  If you widen the Name column you will see that the newly created template contains the string "Cloned."  You have just successfully cloned an assessment template which shows that you have administrative access privileges for Inspector.
 
-5. Now go to the GuardDuty console and select the Settings menu item.  To verify that you do have administrative capabilities for GuardDuty, scroll down to the field named *Updated findings* and change the value to **Send notification every 1 hour** and click **Save settings** at the bottom of the window (you may need to scroll down further).
-You will see a message at the top of your window (you may need to scroll up) saying that the settings have been saved.  This shows you do have full access to *GuardDuty*.
+5. Now go to the GuardDuty console and select the Settings menu item.  To verify that you do have administrative capabilities for GuardDuty, scroll down to the field named *Findings export options* and change the *Frequency for updated findings* value to **Update CWE and S3 every 1 hour** and click **Save**.
+You will see a message at the top of your window (you may need to scroll up) saying that the settings have been saved. This shows you do have full access to *GuardDuty*.
 
-6.  Go to the Macie console, select the US West (Oregon) region, click Settings, and click on the Content Type icon.
-You will see a list of file types appear.
-Pick a file type such as *application/cap*, click the edit widget (it looks like a pencil), change the value of the *Enabled* flag to *No - disabled*.
-This shows that you have administrative access to Macie.
-Close the Macie window.
+6.  Go to the Macie console, make sure you are in the US East (N. Virginia) region, click Settings, scroll down and click the **Suspend Macie** button. Confirm you want to suspend Macie by typing *Suspend* in the text box when prompted. Click ok. This shows that you have administrative access to Macie.
 
-7.  Go back to the console session that you had for GuardDuty and from there go to the CloudTrail console.
+7.  Navigate to the CloudTrail console.
 
 8.  Click **Trails** and then click the trail whose name begins with *esslab*.
 
@@ -202,9 +198,8 @@ The role will have permissions similar to those shown in the picture below.
 The managed policies for Inspector, GuardDuty, and CloudTrail still provide full access to the services.
 The Macie policy (whose name contains *SecOperatorMaciePolicy*), despite its name, still provides full access to Macie. There are also SNS and IAM policies to provide for a better console experience.
 
-3.  Remove the AmazonCloudTrailFullAccess, AmazonGuardDutyFullAccess, and Amazon InspectorFullAccess policies by click on the removal crosses as shown by the arrows.
-Add read-only access policies for Inspector, CloudTrail, and GuardDuty.
-Also modify the SecOperatorMacie policy so that it provides read-only access to Macie.
+3.  Remove the AmazonCloudTrailFullAccess, AmazonGuardDutyFullAccess, and Amazon InspectorFullAccess policies by clicking on the removal crosses as shown by the arrows.
+Add read-only access policies for Inspector, CloudTrail, and GuardDuty. You will also need list access for Inspector, Guard Duty and Macie so that the AWS console can display the service pages correctly. Remember to modify the Macie policy for read and list only.
 
     If you need some hints, open the dropdown below.
 
@@ -246,23 +241,19 @@ You can also select a color that will be used to display the role you assume in 
 6. Now go to the Amazon Inspector Console.  Click **Assessment Templates** and check the box to the left of both of the template names that begin with *LampInspectorAssessmentTemplate* and click **Delete**.  You will be asked to confirm the deletion.  Click **Yes**.  After 30 or so seconds you will see an error message telling you that you are not authorized to call the inspector:DeleteAssessmentTemplate action.  This is because you have read-only access to Inspector.
 
 
-7. Now go to the GuardDuty console, click **Settings**, change the **Updated findings** field to a different value, and click **Save settings**.  You will see an error message telling you that you are not authorized to perform the UpdateDetector action.  You may need to scroll up to see it.  This is because you have read-only access to GuardDuty.
+7. Now go to the GuardDuty console, click **Settings**, change the *Frequency for updated findings* field to a different value, and click **Save**.  You will see an error message telling you that you are not authorized to perform the action.  You may need to scroll up to see it.  This is because you have read-only access to GuardDuty.
 
-8.  Go to the Macie console, select the US West (Oregon) region, click on **Settings** and click on the Content Type icon.
-You will see a list of file types appear.
-Pick a file type such as *application/java*, edit it and change the value of the *Enabled* flag and click **Save**.
-You will receive an error message because you have read-only access to Macie.
-Close the Macie window.
+8.  Go to the Macie console, make sure you are in the US East (N. Virginia) region, click Settings, Ignore the Error at the top. Scroll down and click the **Re-enable Macie** button. You will receive an error message regarding this action because you have read-only access to Macie.
 
-8.  Go back to the console session that you had for GuardDuty and from there go to the CloudTrail console.
+9.  Navigate to the CloudTrail console.
 
-9.  Click **Trails** and click the trail whose name begins with *esslab*.
+10.  Click **Trails** and click the trail whose name begins with *esslab*.
 
-10. Toggle the Logging switch to OFF.  Click **Continue**.  You will receive an error message because you have read-only access to CloudTrail.
+11. Toggle the Logging switch to OFF.  Click **Continue**.  You will receive an error message because you have read-only access to CloudTrail.
 
-11. Now switch back to your default role.
+12. Now switch back to your default role.
 After you to this the SecOperator role label will no longer appear on your console.
 
-12. If you doing this workshop as part of a team **and** you have some time, exchange your account credentials with those of another team and click [here](./verify.md) to proceed to the Verify Phase and begin **at the top.**
+13. If you doing this workshop as part of a team **and** you have some time, exchange your account credentials with those of another team and click [here](./verify.md) to proceed to the Verify Phase and begin **at the top.**
 
     Otherwise, proceed to the [Verify Phase](./verify.md) and go to the **Clean Up section towards the bottom**.
