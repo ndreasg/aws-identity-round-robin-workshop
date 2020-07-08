@@ -168,7 +168,7 @@ You can also select a color that will be used to display the role you assume in 
 5. Now go to the GuardDuty console and select the Settings menu item.  To verify that you do have administrative capabilities for GuardDuty, scroll down to the field named *Findings export options* and change the *Frequency for updated findings* value to **Update CWE and S3 every 1 hour** and click **Save**.
 You will see a message at the top of your window (you may need to scroll up) saying that the settings have been saved. This shows you do have full access to *GuardDuty*.
 
-6.  Go to the Macie console, make sure you are in the the US East (N. Virginia) region, click Settings, scroll down and click the **Suspend Macie** button. Confirm you want to suspend Macie by typing *Suspend* in the text box when prompted. Click ok. This shows that you have administrative access to Macie.
+6.  Go to the Macie console, make sure you are in the US East (N. Virginia) region, click Settings, scroll down and click the **Suspend Macie** button. Confirm you want to suspend Macie by typing *Suspend* in the text box when prompted. Click ok. This shows that you have administrative access to Macie.
 
 7.  Navigate to the CloudTrail console.
 
@@ -243,7 +243,7 @@ You can also select a color that will be used to display the role you assume in 
 
 7. Now go to the GuardDuty console, click **Settings**, change the *Frequency for updated findings* field to a different value, and click **Save**.  You will see an error message telling you that you are not authorized to perform the action.  You may need to scroll up to see it.  This is because you have read-only access to GuardDuty.
 
-8.  Go to the Macie console, make sure you are in the the US East (N. Virginia) region, click Settings, Ignore the Error at the top. Scroll down and click the **Re-enable Macie** button. You will receive an error message regarding this action because you have read-only access to Macie.
+8.  Go to the Macie console, make sure you are in the US East (N. Virginia) region, click Settings, Ignore the Error at the top. Scroll down and click the **Re-enable Macie** button. You will receive an error message regarding this action because you have read-only access to Macie.
 
 9.  Navigate to the CloudTrail console.
 
