@@ -17,7 +17,7 @@
         <meta name="author" content="aws-security-workshops@amazon.com">
       
       <link rel="shortcut icon" href="../assets/images/aws-favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.6">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.a2408e81.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.63b94e9e.min.css">
       
       
     
@@ -50,6 +50,7 @@
   
     <body dir="ltr">
   
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -644,19 +645,27 @@ For the purposes of this round, AWS Security Administrators require full access 
 </ul>
 <h2 id="agenda">Agenda</h2>
 <p>This round is broken down into Build and Verify Phases.</p>
+<ul>
+<li>
 <p><strong>BUILD</strong> (45 min): At a high level, in the Build Phase you will do the following:</p>
-<ol>
-<li>Build the environment using AWS CloudFormation in the us-east-1 (Northern Virginia) region.</li>
+</li>
+<li>
+<p>Build the environment using AWS CloudFormation in the us-east-1 (Northern Virginia) region.</p>
+</li>
 <li>Perform further customization on the environments to restrict the capabilities of the Security Operator Role.</li>
 <li>Test your customizations.</li>
-<li>Pass your credentials to another team to verify the configuration of your environment.</li>
-</ol>
+<li>
+<p>Pass your credentials to another team to verify the configuration of your environment.</p>
+</li>
+<li>
 <p><strong>VERIFY</strong> (30 min):  The Verify Phase involves testing the work that <em>another team</em> did in building the environment to ensure the requirements were met. You will do the following:</p>
-<ol>
-<li>Obtain the login credentials from another team that has performed the steps in the Build Phase.</li>
+</li>
+<li>
+<p>Obtain the login credentials from another team that has performed the steps in the Build Phase.</p>
+</li>
 <li>Test the environment to determine if the Security Operator role has been properly configured.</li>
 <li>Document any variances.</li>
-</ol>
+</ul>
 <blockquote>
 <p>This workshop can be done as a team exercise or individually. The instructions are written with the assumption that you are working as part of a team but you could just as easily do the steps below individually. If done as part of an AWS sponsored event then you'll be split into teams of around 4-6 people. Each team will do the Build Phase and then hand off their accounts to another team. Then another team will do the Verify Phase.</p>
 <p><em>NOTE FOR TEAMS</em>:  If you are doing this exercise as a team and sharing an AWS account , each team member should take turns "driving."  Some services such as GuardDuty and Macie apply to the whole account so only <em>one</em> team member should control that AWS service.</p>
@@ -734,7 +743,7 @@ These may be provided by an event sponsor.</li>
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            &copy; 2019, Amazon Web Services, Inc. or its affiliates. All rights reserved.
+            <a href="https://aws.amazon.com/privacy/" target="_blank">Privacy</a> | <a href="https://aws.amazon.com/terms/" target="_blank">Site terms</a> | &copy; 2020, Amazon Web Services, Inc. or its affiliates. All rights reserved.
           </div>
         
         Made with
@@ -789,15 +798,15 @@ These may be provided by an event sponsor.</li>
       
     </div>
     
-      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.d1f5a259.min.js"></script>
+      <script src="../assets/javascripts/bundle.d5fec882.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: ["tabs"],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.27c6a5e6.min.js"
+            worker: "../assets/javascripts/worker/search.fae956e7.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
