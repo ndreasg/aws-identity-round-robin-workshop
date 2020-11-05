@@ -251,7 +251,7 @@ You can also select a color that will be used to display the role you assume in 
 11. Click the **Stop logging** button on the top right and select **Stop logging** in the pop up window.  You will receive an error message because you have read-only access to CloudTrail.
 
 12. Now switch back to your default role.
-After you to this the SecOperator role label will no longer appear on your console.
+After this the SecOperator role label will no longer appear on your console.
 
 13. If you doing this workshop as part of a team **and** you have some time, exchange your account credentials with those of another team and click [here](./verify.md) to proceed to the Verify Phase and begin **at the top.**
 
