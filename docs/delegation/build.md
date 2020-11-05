@@ -95,9 +95,9 @@ You can refresh the browser window to update the status.
 
 8. Let's take a look at CloudTrail logging.  The most important part of collecting AWS CloudTrail information into an Amazon S3 bucket is setting the correct permissions on the Amazon S3 bucket.
 
-    Go to the S3 console, check the box next to the bucket with the name assigned to *LoggingBucketName* which you note in Step 6, click on **Permissions**, and then Click on **Bucket Policy**.  Note that the policy allows the CloudTrail service to read the ACL of the *LoggingBucket* and also to create logs with prefixes containing the AWS account ID. you can read more about this policy at this [link](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create-s3-bucket-policy-for-cloudtrail.html).
+    Go to the S3 console, click on the name assigned to *LoggingBucketName* which you note in Step 6, click on the  **Permissions** tab, and then scroll down to **Bucket Policy**.  Note that the policy allows the CloudTrail service to read the ACL of the *LoggingBucket* and also to create logs with prefixes containing the AWS account ID. you can read more about this policy at this [link](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create-s3-bucket-policy-for-cloudtrail.html).
 
-9.  Now click the **Overview** tab and then click the **AWSLogs** folder prefix.
+9.  Click the **AWSLogs** folder prefix.
 You should then see the AWS account ID of your account as shown below.
 
     ![LoggingBucket](./images/IamEssBucket.png)
@@ -174,8 +174,7 @@ You will see a message at the top of your window (you may need to scroll up) say
 
 8.  Click **Trails** and then click the trail whose name begins with *esslab*.
 
-9. Toggle the Logging switch to OFF.  You will be asked to confirm.  Click **Continue**.  Now toggle Logging back to ON.
-This shows that you have administrative access to CloudTrail.
+9. Click the **Stop logging** button on the top right and select **Stop logging** in the pop up window. Now toggle logging back on by clicking **Start logging** on the top right. This shows that you have administrative access to CloudTrail.
 
 10.  Now that you have confirmed that you have administrative access to Inspector, Macie, GuardDuty, and CloudTrail, you no longer need your temporary permissions.
 Click on the SecAdministrator label and select **Back to** on the bottom right of the menu as shown below.  Also note that the console maintains a role history to make it easier for you to switch back to the SecAdministrator role later.
@@ -241,7 +240,7 @@ You can also select a color that will be used to display the role you assume in 
 6. Now go to the Amazon Inspector Console.  Click **Assessment Templates** and check the box to the left of both of the template names that begin with *LampInspectorAssessmentTemplate* and click **Delete**.  You will be asked to confirm the deletion.  Click **Yes**.  After 30 or so seconds you will see an error message telling you that you are not authorized to call the inspector:DeleteAssessmentTemplate action.  This is because you have read-only access to Inspector.
 
 
-7. Now go to the GuardDuty console, click **Settings**, change the *Frequency for updated findings* field to a different value, and click **Save**.  You will see an error message telling you that you are not authorized to perform the action.  You may need to scroll up to see it.  This is because you have read-only access to GuardDuty.
+7. Now go to the GuardDuty console, click **Settings**, change the *Frequency for updated findings* field to a different value, and click **Save**.  You will see an error message telling you that you are not authorized to perform the action.  You may need to scroll up to see it. Once you refresh the browser, you can see that the frequency didn't change. This is because you have read-only access to GuardDuty.
 
 8.  Go to the Macie console, make sure you are in the US East (N. Virginia) region, click Settings, Ignore the Error at the top. Scroll down and click the **Re-enable Macie** button. You will receive an error message regarding this action because you have read-only access to Macie.
 
@@ -249,7 +248,7 @@ You can also select a color that will be used to display the role you assume in 
 
 10.  Click **Trails** and click the trail whose name begins with *esslab*.
 
-11. Toggle the Logging switch to OFF.  Click **Continue**.  You will receive an error message because you have read-only access to CloudTrail.
+11. Click the **Stop logging** button on the top right and select **Stop logging** in the pop up window.  You will receive an error message because you have read-only access to CloudTrail.
 
 12. Now switch back to your default role.
 After you to this the SecOperator role label will no longer appear on your console.
