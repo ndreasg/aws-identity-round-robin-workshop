@@ -93,7 +93,7 @@ Resources:
             Resource: "*"
           - Effect: Allow
             Action:
-            - 'macie:*'
+            - 'macie2:*'
             - 'guardduty:*'
             Resource: "*"
 
