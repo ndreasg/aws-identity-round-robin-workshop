@@ -60,7 +60,7 @@ Build an IAM policy so that web admins can create customer managed policies, IAM
 * Browse to the [IAM console](https://console.aws.amazon.com/iam/home).
 * On the first screen you see in the IAM console (which should be the Dashboard) find the **IAM users sign-in link**. Copy that link because you will need the account ID in the URL for the policies and you will need the entire URL when you hand this account to another team for the **VERIFY** phase. 
 ![image1](./images/iam-dashboard.png)
-* Click **Users** on the left menu and create a new IAM user named **`webadmin`**. Check **AWS Management Console access** and then either autogenerate a password or set a custom password. Uncheck **Require password reset**. Attach the AWS managed policies **IAMReadOnlyAccess** & **AWSLambdaReadOnlyAccess** to the user.
+* Click **Users** on the left menu and create a new IAM user named **`webadmin`**. Check **AWS Management Console access** and then either autogenerate a password or set a custom password. Uncheck **Require password reset**. Attach the AWS managed policies **IAMReadOnlyAccess** & **AWSLambda_ReadOnlyAccess** to the user.
 ![image1](./images/create-iam-user.png)
 * Next click **Policies** on the left menu. Create a new IAM policy based on the hint below. Attach this policy to the **`webadmin`** IAM user you just created.
 
@@ -290,7 +290,7 @@ Note that the policy below contains two additional sections (the last two sectio
 ```
 
 * Name the new policy **`webadminpermissionpolicy`** and attach it to the webadmin user. Remove the earlier policy you added during the testing.
-* When you are done the **webadmin** user should have only three policies attached: webadminpermissionpolicy, IAMReadOnlyAccess & AWSLambdaReadOnlyAccess.
+* When you are done the **webadmin** user should have only three policies attached: webadminpermissionpolicy, IAMReadOnlyAccess & AWSLambda_ReadOnlyAccess.
 		
 * Again from the browser where you are logged into the console as the **webadmin**, verify the user can create a policy, create a role (attaching both a permission policy and permissions boundary to the role) and finally create a Lambda function into which you will pass that role. Keep in mind the resource restriction. 
 
