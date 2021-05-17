@@ -681,7 +681,7 @@
 <li>Browse to the <a href="https://console.aws.amazon.com/iam/home">IAM console</a>.</li>
 <li>On the first screen you see in the IAM console (which should be the Dashboard) find the <strong>IAM users sign-in link</strong>. Copy that link because you will need the account ID in the URL for the policies and you will need the entire URL when you hand this account to another team for the <strong>VERIFY</strong> phase. 
 <img alt="image1" src="../images/iam-dashboard.png" /></li>
-<li>Click <strong>Users</strong> on the left menu and create a new IAM user named <strong><code>webadmin</code></strong>. Check <strong>AWS Management Console access</strong> and then either autogenerate a password or set a custom password. Uncheck <strong>Require password reset</strong>. Attach the AWS managed policies <strong>IAMReadOnlyAccess</strong> &amp; <strong>AWSLambdaReadOnlyAccess</strong> to the user.
+<li>Click <strong>Users</strong> on the left menu and create a new IAM user named <strong><code>webadmin</code></strong>. Check <strong>AWS Management Console access</strong> and then either autogenerate a password or set a custom password. Uncheck <strong>Require password reset</strong>. Attach the AWS managed policies <strong>IAMReadOnlyAccess</strong> &amp; <strong>AWSLambda_ReadOnlyAccess</strong> to the user.
 <img alt="image1" src="../images/create-iam-user.png" /></li>
 <li>Next click <strong>Policies</strong> on the left menu. Create a new IAM policy based on the hint below. Attach this policy to the <strong><code>webadmin</code></strong> IAM user you just created.</li>
 </ul>
@@ -914,7 +914,7 @@
 <ul>
 <li>Name the new policy <strong><code>webadminpermissionpolicy</code></strong> and attach it to the webadmin user. Remove the earlier policy you added during the testing.</li>
 <li>
-<p>When you are done the <strong>webadmin</strong> user should have only three policies attached: webadminpermissionpolicy, IAMReadOnlyAccess &amp; AWSLambdaReadOnlyAccess.</p>
+<p>When you are done the <strong>webadmin</strong> user should have only three policies attached: webadminpermissionpolicy, IAMReadOnlyAccess &amp; AWSLambda_ReadOnlyAccess.</p>
 </li>
 <li>
 <p>Again from the browser where you are logged into the console as the <strong>webadmin</strong>, verify the user can create a policy, create a role (attaching both a permission policy and permissions boundary to the role) and finally create a Lambda function into which you will pass that role. Keep in mind the resource restriction. </p>

@@ -807,9 +807,9 @@ AWS_SESSION_TOKEN=FQoG<strong><em>_</em></strong><strong><em>_</em></strong><str
 
 
 <ul>
-<li>Attach the AWSLambdaReadOnlyAccess AWS Managed Policy to the role:</li>
+<li>Attach the AWSLambda_ReadOnlyAccess AWS Managed Policy to the role:</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="err">aws iam attach-role-policy --policy arn:aws:iam::aws:policy/AWSLambdaReadOnlyAccess --role-name webadmins</span>
+<div class="codehilite"><pre><span></span><code><span class="err">aws iam attach-role-policy --policy arn:aws:iam::aws:policy/AWSLambda_ReadOnlyAccess --role-name webadmins</span>
 </code></pre></div>
 
 
@@ -995,7 +995,7 @@ AWS_SESSION_TOKEN=FQoG<strong><em>_</em></strong><strong><em>_</em></strong><str
 </code></pre></div>
 
 
-<p>When you are done the <strong>webadmins</strong> role should have these two policies attached: <strong>webadminspermissionpolicy</strong> &amp; <strong>AWSLambdaReadOnlyAccess</strong>.</p>
+<p>When you are done the <strong>webadmins</strong> role should have these two policies attached: <strong>webadminspermissionpolicy</strong> &amp; <strong>AWSLambda_ReadOnlyAccess</strong>.</p>
 <div class="admonition question">
 <p class="admonition-title">Questions</p>
 <ul>
