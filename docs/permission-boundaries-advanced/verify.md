@@ -196,7 +196,7 @@ Resources created in the **BUILD** phase
 * Detach the two policies from the webadmins role created in the **BUILD** phase:
 ```
 aws iam detach-role-policy --role-name webadmins --policy-arn arn:aws:iam::<ACCOUNT_ID>:policy/webadminspermissionpolicy
-aws iam detach-role-policy --role-name webadmins --policy-arn arn:aws:iam::aws:policy/AWSLambdaReadOnlyAccess 
+aws iam detach-role-policy --role-name webadmins --policy-arn arn:aws:iam::aws:policy/AWSLambda_ReadOnlyAccess 
 ```
 * Delete the webadmins role created in the **BUILD** phase:
 ```

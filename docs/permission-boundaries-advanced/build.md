@@ -136,9 +136,9 @@ First you will create an IAM role for the webadmins (initially this role will tr
 ```
 aws iam create-role --role-name webadmins --assume-role-policy-document file://trustpolicy.json
 ```
-* Attach the AWSLambdaReadOnlyAccess AWS Managed Policy to the role:
+* Attach the AWSLambda_ReadOnlyAccess AWS Managed Policy to the role:
 ```
-aws iam attach-role-policy --policy arn:aws:iam::aws:policy/AWSLambdaReadOnlyAccess --role-name webadmins
+aws iam attach-role-policy --policy arn:aws:iam::aws:policy/AWSLambda_ReadOnlyAccess --role-name webadmins
 ```
 
 
@@ -313,7 +313,7 @@ aws iam create-policy --policy-name webadminspermissionpolicy --policy-document 
 ```
 aws iam attach-role-policy --role-name webadmins --policy-arn arn:aws:iam::<ACCOUNT_ID>:policy/webadminspermissionpolicy
 ```
-When you are done the **webadmins** role should have these two policies attached: **webadminspermissionpolicy** & **AWSLambdaReadOnlyAccess**.
+When you are done the **webadmins** role should have these two policies attached: **webadminspermissionpolicy** & **AWSLambda_ReadOnlyAccess**.
 
 !!! question "Questions"
 
