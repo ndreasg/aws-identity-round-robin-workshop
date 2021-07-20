@@ -20,7 +20,7 @@ To setup your environment please expand one of the following drop-downs (dependi
 
 	Region| Deploy
 	------|-----
-	US East 2 (Ohio) | [![Deploy permissions boundary round in us-east-2](./images/deploy-to-aws.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/new?stackName=Perm-Bound&templateURL=https://s3-us-west-2.amazonaws.com/sa-security-specialist-workshops-us-west-2/identity-workshop/permissionboundary/identity-workshop-web-admins.yaml)
+	US East 2 (Ohio) | [![Deploy permissions boundary round in us-east-2](./images/deploy-to-aws.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/new?stackName=Perm-Bound&templateURL=https://sa-security-specialist-workshops-us-west-2.s3.us-west-2.amazonaws.com/identity-workshop/permissionboundary/identity-workshop-web-admins-advanced-eventengine.yaml)
 
 	1. Click the **Deploy to AWS** button above.  This will automatically take you to the console to run the template.  
 	2. Click **Next** on the **Select Template** section.
@@ -38,7 +38,7 @@ To setup your environment please expand one of the following drop-downs (dependi
 
 	Region| Deploy
 	------|-----
-	US East 2 (Ohio) | [![Deploy permissions boundary round in us-east-2](./images/deploy-to-aws.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/new?stackName=Perm-Bound&templateURL=https://s3-us-west-2.amazonaws.com/sa-security-specialist-workshops-us-west-2/identity-workshop/permissionboundary/identity-workshop-web-admins.yaml)
+	US East 2 (Ohio) | [![Deploy permissions boundary round in us-east-2](./images/deploy-to-aws.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/new?stackName=Perm-Bound&templateURL=https://sa-security-specialist-workshops-us-west-2.s3.us-west-2.amazonaws.com/identity-workshop/permissionboundary/identity-workshop-web-admins-advanced-solo.yaml)
 
 	1. Click the **Deploy to AWS** button above.  This will automatically take you to the console to run the template.  
 	2. Click **Next** on the **Select Template** section.
