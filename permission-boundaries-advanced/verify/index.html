@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -11,13 +9,14 @@
         <meta name="description" content="A hands-on workshop to learn about a variety of AWS identity topics.">
       
       
+      
         <link rel="canonical" href="https://identity-round-robin.awssecworkshops.com/permission-boundaries-advanced/verify/">
       
       
         <meta name="author" content="aws-security-workshops@amazon.com">
       
       <link rel="shortcut icon" href="../../assets/images/aws-favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.6">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
     
     
       
@@ -25,13 +24,17 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.63b94e9e.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.19753c6b.min.css">
       
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.196e0c26.min.css">
+        
       
     
     
     
       
+        
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
@@ -48,9 +51,14 @@
   </head>
   
   
-    <body dir="ltr">
-  
     
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -66,7 +74,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://identity-round-robin.awssecworkshops.com/" title="Identity Round Robin" class="md-header-nav__button md-logo" aria-label="Identity Round Robin">
       
@@ -99,7 +109,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -140,74 +150,7 @@
     
     <div class="md-container" data-md-component="container">
       
-        
       
-      
-        
-          
-
-  
-
-<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  <li class="md-tabs__item">
-    
-      <a href="../.." class="md-tabs__link">
-        Overview
-      </a>
-    
-  </li>
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../serverless/" class="md-tabs__link">
-          Serverless Identity
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../delegation/" class="md-tabs__link">
-          Access Delegation
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../" class="md-tabs__link md-tabs__link--active">
-          Permissions Boundaries - Advanced
-        </a>
-      
-    </li>
-  
-
-      
-        
-      
-        
-      
-    </ul>
-  </div>
-</nav>
         
       
       <main class="md-main" data-md-component="main">
@@ -217,7 +160,9 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://identity-round-robin.awssecworkshops.com/" title="Identity Round Robin" class="md-nav__button md-logo" aria-label="Identity Round Robin">
       
@@ -248,7 +193,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Overview" class="md-nav__link">
+    <a href="../.." class="md-nav__link">
       Overview
     </a>
   </li>
@@ -261,19 +206,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
     <label class="md-nav__link" for="nav-2">
       Serverless Identity
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Serverless Identity" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         Serverless Identity
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -285,7 +225,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../serverless/" title="Scenario" class="md-nav__link">
+    <a href="../../serverless/" class="md-nav__link">
       Scenario
     </a>
   </li>
@@ -297,7 +237,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../serverless/task1/" title="Task 1" class="md-nav__link">
+    <a href="../../serverless/task1/" class="md-nav__link">
       Task 1
     </a>
   </li>
@@ -309,7 +249,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../serverless/task2/" title="Task 2" class="md-nav__link">
+    <a href="../../serverless/task2/" class="md-nav__link">
       Task 2
     </a>
   </li>
@@ -327,19 +267,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
     <label class="md-nav__link" for="nav-3">
       Access Delegation
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Access Delegation" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         Access Delegation
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -351,7 +286,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../delegation/" title="Scenario" class="md-nav__link">
+    <a href="../../delegation/" class="md-nav__link">
       Scenario
     </a>
   </li>
@@ -363,7 +298,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../delegation/build/" title="Build Phase" class="md-nav__link">
+    <a href="../../delegation/build/" class="md-nav__link">
       Build Phase
     </a>
   </li>
@@ -375,7 +310,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../delegation/verify/" title="Verify Phase" class="md-nav__link">
+    <a href="../../delegation/verify/" class="md-nav__link">
       Verify Phase
     </a>
   </li>
@@ -395,19 +330,14 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     <label class="md-nav__link" for="nav-4">
       Permissions Boundaries - Advanced
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Permissions Boundaries - Advanced" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
         Permissions Boundaries - Advanced
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -419,7 +349,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="Scenario" class="md-nav__link">
+    <a href="../" class="md-nav__link">
       Scenario
     </a>
   </li>
@@ -431,7 +361,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../build/" title="Build Phase" class="md-nav__link">
+    <a href="../build/" class="md-nav__link">
       Build Phase
     </a>
   </li>
@@ -453,12 +383,10 @@
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Verify Phase
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
+        <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="./" title="Verify Phase" class="md-nav__link md-nav__link--active">
+    <a href="./" class="md-nav__link md-nav__link--active">
       Verify Phase
     </a>
     
@@ -470,9 +398,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -523,7 +449,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../contribute/" title="Contributing" class="md-nav__link">
+    <a href="../../contribute/" class="md-nav__link">
       Contributing
     </a>
   </li>
@@ -535,7 +461,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../license/" title="License" class="md-nav__link">
+    <a href="../../license/" class="md-nav__link">
       License
     </a>
   </li>
@@ -559,9 +485,7 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -611,9 +535,6 @@
                   </a>
                 
                 
-                  
-                
-                
                 <h1 id="permission-boundaries-workshop-verify-phase">Permission boundaries workshop <small> Verify phase</small></h1>
 <p>It's now time <strong>VERIFY</strong> the setup from the <strong>Build</strong> phase. You will be acting as the webadmins in this phase to check that you can do the following: </p>
 <ol>
@@ -648,7 +569,7 @@
 
 
 <p>If doing this as part of an AWS event you should have received the following information from another team. You will need the <strong>Account ID</strong> and the <strong>Resource restriction</strong> information to complete the tasks in this phase.</p>
-<div class="codehilite"><pre><span></span><code><span class="n">Webadmins</span> <span class="n">role</span> <span class="n">ARN</span><span class="p">:</span> <span class="n">arn</span><span class="p">:</span><span class="n">aws</span><span class="p">:</span><span class="n">iam</span><span class="p">::</span><span class="ss">`ACCOUNT_ID_FROM_OTHER_TEAM`</span><span class="p">:</span><span class="n">role</span><span class="cm">/**webadmins**</span>
+<div class="codehilite"><pre><span></span><code><span class="n">Webadmins</span> <span class="k">role</span> <span class="n">ARN</span><span class="o">:</span> <span class="n">arn</span><span class="o">:</span><span class="n">aws</span><span class="o">:</span><span class="n">iam</span><span class="o">::</span><span class="n n-Quoted">`ACCOUNT_ID_FROM_OTHER_TEAM`</span><span class="o">:</span><span class="k">role</span><span class="cm">/**webadmins**</span>
 <span class="cm">Resource restriction for both the roles and policies: /webadmins/`Resource restriction`</span>
 <span class="cm">Permissions boundary name: **webadminspermissionsboundary**</span>
 <span class="cm">Permission policy name: **webadminspermissionpolicy**</span>
@@ -742,26 +663,26 @@
   In Amazon S3, buckets and objects are the primary resources, and objects are stored in buckets. Amazon S3 has a flat structure instead of a hierarchy like you would see in a file system. However, for the sake of organizational simplicity, the Amazon S3 console supports the folder concept as a means of grouping objects. Amazon S3 does this by using a <strong>shared name prefix</strong> for objects (that is, objects that have names that begin with a common string). Object names are also referred to as key names. For example, you can create a folder on the console named photos and store an object named myphoto.jpg in it. The object is then stored with the key name photos/myphoto.jpg, where photos/ is the prefix.
 </p></p>
 </details>
-<div class="codehilite"><pre><span></span><code><span class="nt">const</span> <span class="nt">AWS</span> <span class="o">=</span> <span class="nt">require</span><span class="o">(</span><span class="s1">&#39;aws-sdk&#39;</span><span class="o">);</span>
-<span class="nt">const</span> <span class="nt">s3</span> <span class="o">=</span> <span class="nt">new</span> <span class="nt">AWS</span><span class="p">.</span><span class="nc">S3</span><span class="o">();</span>
+<div class="codehilite"><pre><span></span><code><span class="k">const</span> <span class="n">AWS</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s1">&#39;aws-sdk&#39;</span><span class="p">);</span>
+<span class="k">const</span> <span class="n">s3</span> <span class="o">=</span> <span class="n">new</span> <span class="n">AWS</span><span class="o">.</span><span class="n">S3</span><span class="p">();</span>
 
-<span class="nt">exports</span><span class="p">.</span><span class="nc">handler</span> <span class="o">=</span> <span class="nt">async</span> <span class="o">(</span><span class="nt">event</span><span class="o">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="err">console.log(&#39;Loading</span> <span class="err">function&#39;)</span><span class="p">;</span>
-  <span class="err">const</span> <span class="err">allKeys</span> <span class="err">=</span> <span class="cp">[]</span><span class="p">;</span>
-  <span class="err">await</span> <span class="err">getKeys({</span> <span class="n">Bucket</span><span class="p">:</span> <span class="s1">&#39;SHARED_LOGGING_BUCKET_NAME&#39;</span> <span class="p">,</span> <span class="n">Prefix</span><span class="o">:</span> <span class="s1">&#39;PREFIX_FROM_PERMISSIONS_BOUNDARY&#39;</span><span class="p">}</span><span class="o">,</span> <span class="nt">allKeys</span><span class="o">);</span>
-  <span class="nt">return</span> <span class="nt">allKeys</span><span class="o">;</span>
-<span class="err">}</span><span class="o">;</span>
+<span class="n">exports</span><span class="o">.</span><span class="n">handler</span> <span class="o">=</span> <span class="n">async</span> <span class="p">(</span><span class="n">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;Loading function&#39;</span><span class="p">);</span>
+  <span class="k">const</span> <span class="n">allKeys</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="n">await</span> <span class="n">getKeys</span><span class="p">({</span> <span class="n">Bucket</span><span class="p">:</span> <span class="s1">&#39;SHARED_LOGGING_BUCKET_NAME&#39;</span> <span class="p">,</span> <span class="n">Prefix</span><span class="p">:</span> <span class="s1">&#39;PREFIX_FROM_PERMISSIONS_BOUNDARY&#39;</span><span class="p">},</span> <span class="n">allKeys</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">allKeys</span><span class="p">;</span>
+<span class="p">};</span>
 
-<span class="nt">async</span> <span class="nt">function</span> <span class="nt">getKeys</span><span class="o">(</span><span class="nt">params</span><span class="o">,</span> <span class="nt">keys</span><span class="o">)</span><span class="p">{</span>
-  <span class="err">const</span> <span class="err">response</span> <span class="err">=</span> <span class="err">await</span> <span class="err">s3.listObjectsV2(params).promise()</span><span class="p">;</span>
-  <span class="err">response.Contents.forEach(obj</span> <span class="err">=&gt;</span> <span class="err">keys.push(obj.Key))</span><span class="p">;</span>
+<span class="n">async</span> <span class="n">function</span> <span class="n">getKeys</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">keys</span><span class="p">){</span>
+  <span class="k">const</span> <span class="n">response</span> <span class="o">=</span> <span class="n">await</span> <span class="n">s3</span><span class="o">.</span><span class="n">listObjectsV2</span><span class="p">(</span><span class="n">params</span><span class="p">)</span><span class="o">.</span><span class="n">promise</span><span class="p">();</span>
+  <span class="n">response</span><span class="o">.</span><span class="n">Contents</span><span class="o">.</span><span class="n">forEach</span><span class="p">(</span><span class="n">obj</span> <span class="o">=&gt;</span> <span class="n">keys</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">Key</span><span class="p">));</span>
 
-  <span class="err">if</span> <span class="err">(response.IsTruncated)</span> <span class="err">{</span>
-    <span class="err">const</span> <span class="err">newParams</span> <span class="err">=</span> <span class="err">Object.assign({</span><span class="p">}</span><span class="o">,</span> <span class="nt">params</span><span class="o">);</span>
-    <span class="nt">newParams</span><span class="p">.</span><span class="nc">ContinuationToken</span> <span class="o">=</span> <span class="nt">response</span><span class="p">.</span><span class="nc">NextContinuationToken</span><span class="o">;</span>
-    <span class="nt">await</span> <span class="nt">getKeys</span><span class="o">(</span><span class="nt">newParams</span><span class="o">,</span> <span class="nt">keys</span><span class="o">);</span> 
-  <span class="err">}</span>
-<span class="err">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">IsTruncated</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">const</span> <span class="n">newParams</span> <span class="o">=</span> <span class="nb nb-Type">Object</span><span class="o">.</span><span class="n">assign</span><span class="p">({},</span> <span class="n">params</span><span class="p">);</span>
+    <span class="n">newParams</span><span class="o">.</span><span class="n">ContinuationToken</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">NextContinuationToken</span><span class="p">;</span>
+    <span class="n">await</span> <span class="n">getKeys</span><span class="p">(</span><span class="n">newParams</span><span class="p">,</span> <span class="n">keys</span><span class="p">);</span> 
+  <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 
 
@@ -879,7 +800,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../build/" title="Build Phase" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../build/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -894,7 +815,7 @@
           </a>
         
         
-          <a href="../../contribute/" title="Contributing" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../contribute/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
@@ -971,15 +892,15 @@
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.d1f5a259.min.js"></script>
-      <script src="../../assets/javascripts/bundle.d5fec882.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "../..",
-          features: ["tabs"],
+          features: ['tabs'],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.fae956e7.min.js"
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
